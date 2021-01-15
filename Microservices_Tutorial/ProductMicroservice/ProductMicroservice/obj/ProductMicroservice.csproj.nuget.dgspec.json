@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\ProductMicroservice\\ProductMicroservice\\ProductMicroservice.csproj": {}
+  },
+  "projects": {
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\ProductMicroservice\\ProductMicroservice\\ProductMicroservice.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\ProductMicroservice\\ProductMicroservice\\ProductMicroservice.csproj",
+        "projectName": "ProductMicroservice",
+        "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\ProductMicroservice\\ProductMicroservice\\ProductMicroservice.csproj",
+        "packagesPath": "C:\\Users\\Akash Kumar Sinha\\.nuget\\packages\\",
+        "outputPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\ProductMicroservice\\ProductMicroservice\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Akash Kumar Sinha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

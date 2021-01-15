@@ -1,0 +1,11 @@
+services:
+  productmicroservice:
+    build:
+      context: E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\ProductMicroservice
+      dockerfile: ProductMicroservice/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: productmicroservice
+    ports:
+    - target: 80
+version: '3.4'
