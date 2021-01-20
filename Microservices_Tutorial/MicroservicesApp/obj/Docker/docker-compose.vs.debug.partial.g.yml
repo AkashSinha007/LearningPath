@@ -1,0 +1,57 @@
+version: '3.4'
+
+services:
+  basketapi:
+    image: basketapi:dev
+    container_name: BasketAPI
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "BasketAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_basketapi$
+    volumes:
+      - E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp\src\Basket\BasketAPI:/app
+      - E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp:/src
+      - C:\Users\Akash Kumar Sinha\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_basketapi$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_basketapi$ \"\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  catalogapi:
+    image: catalogapi:dev
+    container_name: CatalogAPI
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "CatalogAPI"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_catalogapi$
+    volumes:
+      - E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp\src\Catalog\CatalogAPI:/app
+      - E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp:/src
+      - C:\Users\Akash Kumar Sinha\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_catalogapi$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_catalogapi$ \"\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

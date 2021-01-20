@@ -1,0 +1,106 @@
+E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp>docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+WARNING: The WEBAPP_STORAGE_HOME variable is not set. Defaulting to a blank string.
+WARNING: The HOME variable is not set. Defaulting to a blank string.
+Creating network "microservicesapp_default" with the default driver
+Building catalogapi
+Step 1/16 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+3.1-buster-slim: Pulling from dotnet/core/aspnet
+a076a628af6f: Pull complete
+e79f147a4676: Pull complete
+9b3ac742235a: Pull complete
+f6dc7f655a1d: Pull complete
+f9544f1b1fca: Pull complete
+Digest: sha256:84e21b92bb3f44777308b152253d2667f124c2cc00da693fdcea2e681f0f5265
+Status: Downloaded newer image for mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim
+ ---> 55e263be46d8
+Step 2/16 : WORKDIR /app
+ ---> Running in d354ebba36ba
+Removing intermediate container d354ebba36ba
+ ---> b858e6650832
+Step 3/16 : EXPOSE 80
+ ---> Running in fc38e224214b
+Removing intermediate container fc38e224214b
+ ---> 041f37246ed1
+
+Step 4/16 : FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+3.1-buster: Pulling from dotnet/core/sdk
+b9a857cbf04d: Pull complete
+d557ee20540b: Pull complete
+3b9ca4f00c2e: Pull complete
+667fd949ed93: Pull complete
+2936416f72f0: Pull complete
+6af5f6ae111f: Pull complete
+b858792f6c70: Pull complete
+Digest: sha256:0fece15a102530aa2dad9d247bc0d05db6790917696377fc56a8465604ef1aff
+Status: Downloaded newer image for mcr.microsoft.com/dotnet/core/sdk:3.1-buster
+ ---> 52a3845cafb1
+Step 5/16 : WORKDIR /src
+ ---> Running in 3e2c8596f9f6
+Removing intermediate container 3e2c8596f9f6
+ ---> 701e9df33862
+Step 6/16 : COPY ["src/Catalog/CatalogAPI/CatalogAPI.csproj", "src/Catalog/CatalogAPI/"]
+ ---> 2a5924b9c79f
+Step 7/16 : RUN dotnet restore "src/Catalog/CatalogAPI/CatalogAPI.csproj"
+ ---> Running in 5a91ef26726f
+  Determining projects to restore...
+  Restored /src/src/Catalog/CatalogAPI/CatalogAPI.csproj (in 32.17 sec).
+Removing intermediate container 5a91ef26726f
+ ---> c416796f7897
+Step 8/16 : COPY . .
+ ---> 112ec8e122c7
+Step 9/16 : WORKDIR "/src/src/Catalog/CatalogAPI"
+ ---> Running in b14651fb3a76
+Removing intermediate container b14651fb3a76
+ ---> 569f7009a74e
+Step 10/16 : RUN dotnet build "CatalogAPI.csproj" -c Release -o /app/build
+ ---> Running in 5760d61fda0a
+Microsoft (R) Build Engine version 16.7.2+b60ddb6f4 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CatalogAPI -> /app/build/CatalogAPI.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.04
+Removing intermediate container 5760d61fda0a
+ ---> 564a2a60b4d8
+
+Step 11/16 : FROM build AS publish
+ ---> 564a2a60b4d8
+Step 12/16 : RUN dotnet publish "CatalogAPI.csproj" -c Release -o /app/publish
+ ---> Running in e07e6a7fe0c5
+Microsoft (R) Build Engine version 16.7.2+b60ddb6f4 for .NET
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CatalogAPI -> /src/src/Catalog/CatalogAPI/bin/Release/netcoreapp3.1/CatalogAPI.dll
+  CatalogAPI -> /app/publish/
+Removing intermediate container e07e6a7fe0c5
+ ---> aee696745219
+
+Step 13/16 : FROM base AS final
+ ---> 041f37246ed1
+Step 14/16 : WORKDIR /app
+ ---> Running in d1c60fef3971
+Removing intermediate container d1c60fef3971
+ ---> 08a1d981cbd5
+Step 15/16 : COPY --from=publish /app/publish .
+ ---> 2f2b57fb3fb4
+Step 16/16 : ENTRYPOINT ["dotnet", "CatalogAPI.dll"]
+ ---> Running in 37e3519a67a2
+Removing intermediate container 37e3519a67a2
+ ---> 6463e5e25854
+
+Successfully built 6463e5e25854
+Successfully tagged catalogapi:latest
+WARNING: Image for service catalogapi was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating catalogdb ... done
+Creating microservicesapp_catalogapi_1 ... done
+
+E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp>
+

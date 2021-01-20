@@ -1,0 +1,47 @@
+
+docker images
+docker ps
+
+docker run -d -p 27017:27017 --name Akash_Mongo_Instance mongo
+docker exec -it Akash_Mongo_Instance /bin/bash
+
+1. #mongo
+2. >show dbs
+3. >use CatalogDb
+4. >db.createCollection('Products')
+5. db.Products.insertMany(
+		[
+			{
+				"Name": "Asus Laptop",
+				"Category": "Computers",
+				"Summary": "Summary",
+				"Description": "Description",
+				"ImageFile":"ImageFile",
+				"Price": 54.93
+			},
+			{
+				"Name": "HP Laptop",
+				"Category": "Computers",
+				"Summary": "Summary",
+				"Description": "Description",
+				"ImageFile":"ImageFile",
+				"Price": 88.93
+			}
+		]
+	)
+	
+6. 	>db.Products.find().pretty()
+7.	>db.Products.remove({})
+   
+8. >show databases
+
+9. >show collections
+
+image path:
+\\wsl$\docker-desktop-data\mnt\wsl\docker-desktop-data\data\docker\image
+
+Command to run in terminal:
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+
+http://localhost:19296/api/product
