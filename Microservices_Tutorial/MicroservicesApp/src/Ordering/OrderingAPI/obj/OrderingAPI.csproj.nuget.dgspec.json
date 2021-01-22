@@ -1,0 +1,417 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingAPI\\OrderingAPI.csproj": {}
+  },
+  "projects": {
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
+        "projectName": "EventBusRabbitMQ",
+        "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj",
+        "packagesPath": "C:\\Users\\Akash Kumar Sinha\\.nuget\\packages\\",
+        "outputPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Common\\EventBusRabbitMQ\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Akash Kumar Sinha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingAPI\\OrderingAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingAPI\\OrderingAPI.csproj",
+        "projectName": "OrderingAPI",
+        "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingAPI\\OrderingAPI.csproj",
+        "packagesPath": "C:\\Users\\Akash Kumar Sinha\\.nuget\\packages\\",
+        "outputPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Akash Kumar Sinha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj": {
+                "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Common\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj"
+              },
+              "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingApplication\\OrderingApplication.csproj": {
+                "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingApplication\\OrderingApplication.csproj"
+              },
+              "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj": {
+                "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj"
+              },
+              "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\OrderingInfrastructure.csproj": {
+                "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\OrderingInfrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingApplication\\OrderingApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingApplication\\OrderingApplication.csproj",
+        "projectName": "OrderingApplication",
+        "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingApplication\\OrderingApplication.csproj",
+        "packagesPath": "C:\\Users\\Akash Kumar Sinha\\.nuget\\packages\\",
+        "outputPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Akash Kumar Sinha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj": {
+                "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj"
+              },
+              "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\OrderingInfrastructure.csproj": {
+                "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\OrderingInfrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj",
+        "projectName": "OrderingCore",
+        "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj",
+        "packagesPath": "C:\\Users\\Akash Kumar Sinha\\.nuget\\packages\\",
+        "outputPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Akash Kumar Sinha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\OrderingInfrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\OrderingInfrastructure.csproj",
+        "projectName": "OrderingInfrastructure",
+        "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\OrderingInfrastructure.csproj",
+        "packagesPath": "C:\\Users\\Akash Kumar Sinha\\.nuget\\packages\\",
+        "outputPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingInfrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Akash Kumar Sinha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj": {
+                "projectPath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

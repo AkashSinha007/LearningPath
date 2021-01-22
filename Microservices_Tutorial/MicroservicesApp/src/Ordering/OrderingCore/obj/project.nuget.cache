@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0azjRKbC9Ngls0msVOFw8S+gZKnLSMRSeG+MeJLMto2Xm+8QHicpV8J77oyb+dQe0ohTYr5ydNApTOmjCYqyAQ==",
+  "success": true,
+  "projectFilePath": "E:\\myStudies\\myCodingGround\\Github_Official_Projects\\The_Learning_Path_Github\\Microservices_Tutorial\\MicroservicesApp\\src\\Ordering\\OrderingCore\\OrderingCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Akash Kumar Sinha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

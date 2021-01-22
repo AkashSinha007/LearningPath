@@ -6,9 +6,12 @@ services:
     depends_on:
       basketdb:
         condition: service_started
+      rabbitmq:
+        condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings:Redis: basketdb:6379
+      EventBus:HostName: rabbitmq
     image: basketapi
     ports:
     - published: 8001
@@ -49,4 +52,13 @@ services:
     restart: always
     volumes:
     - /site:/data/db:rw
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    restart: always
 version: '3.4'
