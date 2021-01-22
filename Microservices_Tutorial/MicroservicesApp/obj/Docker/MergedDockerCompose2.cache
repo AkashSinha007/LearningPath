@@ -1,0 +1,98 @@
+services:
+  basketapi:
+    build:
+      context: E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp
+      dockerfile: src/Basket/BasketAPI/Dockerfile
+    container_name: basketapi
+    depends_on:
+      basketdb:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:Redis: basketdb:6379
+      EventBus:HostName: rabbitmq
+    image: basketapi
+    ports:
+    - published: 8001
+      target: 80
+    volumes:
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - /.microsoft/usersecrets:/root/.microsoft/usersecrets:rw
+  basketdb:
+    container_name: basketdb
+    image: redis
+    ports:
+    - published: 6379
+      target: 6379
+    restart: always
+  catalogapi:
+    build:
+      context: E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp
+      dockerfile: src/Catalog/CatalogAPI/Dockerfile
+    container_name: catalogapi
+    depends_on:
+      catalogdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      CatalogDatabaseSettings:ConnectionString: mongodb://catalogdb:27017
+    image: catalogapi
+    ports:
+    - published: 8000
+      target: 80
+    volumes:
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - /.microsoft/usersecrets:/root/.microsoft/usersecrets:rw
+  catalogdb:
+    container_name: catalogdb
+    image: mongo
+    ports:
+    - published: 27017
+      target: 27017
+    restart: always
+    volumes:
+    - /site:/data/db:rw
+  orderdb:
+    container_name: orderdb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Akash@Pass123
+    image: mcr.microsoft.com/mssql/server
+    ports:
+    - published: 1433
+      target: 1433
+  orderingapi:
+    build:
+      context: E:\myStudies\myCodingGround\Github_Official_Projects\The_Learning_Path_Github\Microservices_Tutorial\MicroservicesApp
+      dockerfile: src/Ordering/OrderingAPI/Dockerfile
+    container_name: orderingapi
+    depends_on:
+      orderdb:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:OrderConnection: Server=orderdb,1433;Database=OrderDb;User
+        Id=sa;Password=Akash@Pass123
+      EventBus:HostName: rabbitmq
+    image: orderingapi
+    ports:
+    - published: 8002
+      target: 80
+    restart: on-failure
+    volumes:
+    - /.aspnet/https:/root/.aspnet/https/:rw
+    - /.microsoft/usersecrets:/root/.microsoft/usersecrets:rw
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+    restart: always
+version: '3.4'
